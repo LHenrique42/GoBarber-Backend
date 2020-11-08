@@ -1,6 +1,7 @@
 /* eslint-disable class-methods-use-this */
 import { getRepository } from 'typeorm';
 import { hash } from 'bcryptjs';
+
 import User from '../models/User';
 
 interface Request {
