@@ -4,6 +4,7 @@ interface UserDTO {
     id: string;
     name: string;
     email: string;
+    avatar: string;
 }
 
 export default class UserMap {
@@ -16,6 +17,7 @@ export default class UserMap {
             id: user.id,
             name: user.name,
             email: user.email,
+            avatar: user.avatar,
         };
     }
 }
