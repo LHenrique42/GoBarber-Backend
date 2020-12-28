@@ -1,0 +1,238 @@
+_type: export
+__export_format: 4
+__export_date: 2020-12-28T03:49:54.202Z
+__export_source: insomnia.desktop.app:v2020.5.2
+resources:
+  - _id: req_31d234da4fd94958b685c9072a2e247d
+    parentId: fld_3faa8b141cb048989725a9bc0f30c9b3
+    modified: 1605147599000
+    created: 1604793881715
+    url: "{{ base_url }}/sessions"
+    name: Create
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email": "henriquegundes@outlook.com",
+        	"password": "password"
+        }
+    parameters: []
+    headers:
+      - id: pair_16d27f5bb36d413f96a27872d338f8b2
+        name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+    metaSortKey: -1599323975834.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_3faa8b141cb048989725a9bc0f30c9b3
+    parentId: wrk_8272d2f2e810459dabbea0785ee1ecdf
+    modified: 1604793871598
+    created: 1604793871598
+    name: Sessions
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1604793871598
+    _type: request_group
+  - _id: wrk_8272d2f2e810459dabbea0785ee1ecdf
+    parentId: null
+    modified: 1599323955586
+    created: 1599323955586
+    name: GoBarber
+    description: ""
+    scope: null
+    _type: workspace
+  - _id: req_74140a9549e64501b0b2d52914867c78
+    parentId: fld_fd4ec38472c748f3835bae8dc6136f78
+    modified: 1604940019054
+    created: 1604805467472
+    url: "{{ base_url }}/users/avatar"
+    name: UpdateAvatar
+    description: ""
+    method: PATCH
+    body:
+      mimeType: multipart/form-data
+      params:
+        - name: avatar
+          value: ""
+          description: ""
+          id: pair_d9ede132275949f1bdb1f3ca4dcb98ed
+          type: file
+          fileName: /home/henrique/Downloads/WhatsApp Image 2020-08-15 at 14.39.56.jpeg
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: multipart/form-data
+        id: pair_334b02996456407c9123c854b5f06f08
+    authentication:
+      type: bearer
+      token: "{{ token }}"
+    metaSortKey: -1604805467472
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_fd4ec38472c748f3835bae8dc6136f78
+    parentId: wrk_8272d2f2e810459dabbea0785ee1ecdf
+    modified: 1601241415690
+    created: 1601241415690
+    name: Users
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1601241415690
+    _type: request_group
+  - _id: req_f656824957f04fbb802b627b11dea448
+    parentId: fld_fd4ec38472c748f3835bae8dc6136f78
+    modified: 1605147588101
+    created: 1601241419991
+    url: "{{ base_url }}/users"
+    name: Create
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Henrique",
+        	"email": "henriquegundes@outlook.com",
+        	"password": "password"
+        }
+    parameters: []
+    headers:
+      - id: pair_16d27f5bb36d413f96a27872d338f8b2
+        name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1599323975847
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_dee2d68aff734134a6a8cec4c4a3fa54
+    parentId: fld_1398f088994c42f3b037579e871018c9
+    modified: 1604936578698
+    created: 1599323975871
+    url: "{{ base_url }}/appointments"
+    name: Create
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"provider_id": "96a7edd6-0681-4a5d-8cc0-668105f10543",
+        	"date": "{% now 'iso-8601', '' %}"
+        }
+    parameters: []
+    headers:
+      - id: pair_16d27f5bb36d413f96a27872d338f8b2
+        name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: "{{ token }}"
+      disabled: false
+    metaSortKey: -1599323975872
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_1398f088994c42f3b037579e871018c9
+    parentId: wrk_8272d2f2e810459dabbea0785ee1ecdf
+    modified: 1599323964600
+    created: 1599323964600
+    name: Appointments
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1599323964600
+    _type: request_group
+  - _id: req_ede023177ba14291a0ece15c819392e3
+    parentId: fld_1398f088994c42f3b037579e871018c9
+    modified: 1604803620872
+    created: 1599354406306
+    url: "{{ base_url }}/appointments"
+    name: List
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      token: "{{ token }}"
+      disabled: false
+    metaSortKey: -1599323975822
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_7b549fe99bf05bdbe1c9a8793f86496c0d43cbf6
+    parentId: wrk_8272d2f2e810459dabbea0785ee1ecdf
+    modified: 1599323955763
+    created: 1599323955763
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1599323955763
+    _type: environment
+  - _id: jar_7b549fe99bf05bdbe1c9a8793f86496c0d43cbf6
+    parentId: wrk_8272d2f2e810459dabbea0785ee1ecdf
+    modified: 1599323955766
+    created: 1599323955766
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_20ce114fe7ac42569a06ad4514730e4c
+    parentId: wrk_8272d2f2e810459dabbea0785ee1ecdf
+    modified: 1599323955606
+    created: 1599323955606
+    fileName: GoBarber
+    contents: ""
+    contentType: yaml
+    _type: api_spec
+  - _id: env_e14b4529097e497e84016917db26735a
+    parentId: env_7b549fe99bf05bdbe1c9a8793f86496c0d43cbf6
+    modified: 1605145123228
+    created: 1599323987743
+    name: dev
+    data:
+      base_url: http://localhost:3333
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDUxNDUxMTAsImV4cCI6MTYwNTIzMTUxMCwic3ViIjoiOTZhN2VkZDYtMDY4MS00YTVkLThjYzAtNjY4MTA1ZjEwNTQzIn0.GBhX2UYC8qLCO_mtbX9ZNWzvj-3EKXgVu13t6S8NoYA
+    dataPropertyOrder:
+      "&":
+        - base_url
+        - token
+    color: "#7c0ec1"
+    isPrivate: false
+    metaSortKey: 1599323987743
+    _type: environment
